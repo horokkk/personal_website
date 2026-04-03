@@ -3,56 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
-    <title>Jiyoon Kim - Personal Brand</title>
+    <title>Personal Website</title>
     <style>
         body {
-            background-color: gray;
-            color: white;
             font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4a4a4a;
             padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         h1 {
-            color: blue;
+            color: #333;
+            animation: fadeIn 2s;
         }
-        a {
-            color: blue;
-            text-decoration: none;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        .highlight {
-            color: blue;
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4a4a4a;
+            color: white;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Jiyoon Kim's Personal Brand</h1>
+        <h1>Welcome to My Personal Website</h1>
     </header>
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Hi! My name is Jiyoon Kim. I am currently studying Computer Science at <span class="highlight">Ewha Womans University</span>. I have a strong interest in AI research, particularly in:</p>
-            <ul>
-                <li>AI for systems</li>
-                <li>Physical AI</li>
-                <li>Edge AI</li>
-                <li>Multimodal AI</li>
-                <li>Federated learning</li>
-                <li>Continual learning</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Connect with Me</h2>
-            <p>You can find more about my professional background on my <a href="https://www.linkedin.com/in/jiyoon-kim-181547368/" target="_blank">LinkedIn profile</a>.</p>
-        </section>
-        <section>
-            <h2>Interests</h2>
-            <p>In my free time, I enjoy gaming, watching dramas, and meeting different kinds of people.</p>
-        </section>
-    </main>
+    <div class="container">
+        <h2>About Me</h2>
+        <p>This is my personal website where I share my projects and ideas.</p>
+    </div>
     <footer>
-        <p>&copy; 2026 Jiyoon Kim. All rights reserved.</p>
+        <p>Copyright &copy; 2026 horokkk</p>
     </footer>
 </body>
 </html>
