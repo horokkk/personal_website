@@ -1,10 +1,48 @@
-# Personal Brand Webpage
+# Jiyoon Kim - Personal Brand Website
 
-Welcome to my personal brand webpage project! This website serves as a platform to showcase my work, skills, and interests. Here, you can find information about my projects, blog posts, and how to get in touch with me.
+Welcome to my personal brand website! This is a modern, artistic portfolio showcasing my passion for AI research and personal interests.
 
-## View the Live Site
-You can view the live version of the website at the following link:
+## 🌐 Live Website
 
-[Live Site](https://horokkk.github.io/personal_website/)
+**Visit my website:** [https://horokkk.github.io/personal_website/](https://horokkk.github.io/personal_website/)
 
-Feel free to explore and reach out if you have any questions!
+## 📋 About This Project
+
+This is a clean, minimalist personal website built with:
+- **HTML5** - Semantic structure
+- **CSS3** - Modern styling with animations
+- **Responsive Design** - Works on all devices
+- **Security-First** - Content Security Policy headers included
+
+## 🎨 Design Features
+
+- **Color Scheme**: Gray and blue with blue as the highlight color
+- **Artistic & Minimalist**: Clean typography, generous whitespace, smooth animations
+- **Fully Responsive**: Beautiful on mobile, tablet, and desktop
+- **Fast Loading**: Single-file, no external dependencies
+
+## 📚 What's Included
+
+- **About Me**: Background at Ewha Womans University, Grade 4 Computer Science
+- **Research Interests**: 
+  - AI for Systems
+  - Physical AI
+  - Edge AI
+  - Multimodal AI
+  - Federated Learning
+  - Continual Learning
+- **Personal Interests**: Gaming, Dramas, Meeting diverse people
+- **Contact**: LinkedIn profile link
+
+## 🚀 Quick Start
+
+### View Locally
+```bash
+# Clone the repository
+git clone https://github.com/horokkk/personal_website.git
+cd personal_website
+
+# Open in your browser
+open index.html  # macOS
+start index.html # Windows
+xdg-open index.html # Linux
