@@ -23,7 +23,7 @@ This is a clean, minimalist personal website built with:
 
 ## 📚 What's Included
 
-- **About Me**: Background at Ewha Womans University, Grade 4 Computer Science
+- **About Me**: Background at Ewha Womans University, Senior Computer Science student
 - **Research Interests**: 
   - AI for Systems
   - Physical AI
