@@ -2,6 +2,10 @@
 
 Welcome to my personal brand website! This is a modern, artistic portfolio showcasing my passion for AI research and personal interests.
 
+## 🌐 Repository
+
+**View the repository:** [https://github.com/horokkk/personal_website](https://github.com/horokkk/personal_website)
+
 ## 🌐 Live Website
 
 **Visit my website:** [https://horokkk.github.io/personal_website/](https://horokkk.github.io/personal_website/)
