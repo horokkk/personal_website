@@ -3,55 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jiyoon Kim | Personal Brand</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+        * {
             margin: 0;
             padding: 0;
-            color: #333;
+            box-sizing: border-box;
         }
+
+        :root {
+            --primary-blue: #0066cc;
+            --dark-gray: #2c3e50;
+            --light-gray: #f8f9fa;
+            --medium-gray: #ecf0f1;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--light-gray) 0%, #e8eef7 100%);
+            min-height: 100vh;
+        }
+
         header {
-            background-color: #4a4a4a;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
             background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+        }
+
+        section {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .interest-tag {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e3f0ff 100%);
+            border-left: 4px solid var(--primary-blue);
+            padding: 1rem;
             border-radius: 8px;
         }
-        h1 {
-            color: #333;
-            animation: fadeIn 2s;
+
+        .interest-tag strong {
+            color: var(--primary-blue);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+
+        .hobbies {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
         }
-        footer {
+
+        .hobby-item {
+            flex: 1;
+            min-width: 150px;
             text-align: center;
-            padding: 10px 0;
-            background-color: #4a4a4a;
+            padding: 1.5rem;
+            background: var(--medium-gray);
+            border-radius: 8px;
+        }
+
+        .hobby-item strong {
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            background: var(--primary-blue);
             color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: var(--dark-gray);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 2rem;
+            }
+
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Personal Website</h1>
+        <nav>
+            <div class="logo">JK</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <h2>About Me</h2>
-        <p>This is my personal website where I share my projects and ideas.</p>
-    </div>
+
+    <main>
+        <section class="hero">
+            <h1>Jiyoon Kim</h1>
+            <p class="tagline">Computer Science • AI Research • Systems & Edge Computing</p>
+            <a href="#about" class="cta-button">Learn More</a>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Jiyoon Kim, a <strong>Grade 4 Computer Science student</strong> at <span style="color: var(--primary-blue);">Ewha Womans University</span>.</p>
+            <p>I'm passionate about artificial intelligence research with a focus on practical and cutting-edge applications. My academic journey has shaped my deep interest in how AI can be applied to real-world systems and edge devices.</p>
+        </section>
+
+        <section id="interests">
+            <h2>Research Interests</h2>
+            <p>My passion lies in several key areas of AI research:</p>
+            <div class="interests-grid">
+                <div class="interest-tag">
+                    <strong>🔧 AI for Systems</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Optimizing AI in system operations</p>
+                </div>
+                <div class="interest-tag">
+                    <strong>🤖 Physical AI</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">AI with robotics and physical interactions</p>
+                </div>
+                <div class="interest-tag">
+                    <strong>⚡ Edge AI</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Deploying models on edge devices</p>
+                </div>
+                <div class="interest-tag">
+                    <strong>🎨 Multimodal AI</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Processing multiple data modalities</p>
+                </div>
+                <div class="interest-tag">
+                    <strong>🔗 Federated Learning</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Distributed ML with privacy</p>
+                </div>
+                <div class="interest-tag">
+                    <strong>🧠 Continual Learning</strong>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">AI systems that learn continuously</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies">
+            <h2>Beyond Research</h2>
+            <p>When I'm not diving into AI research, you'll find me:</p>
+            <div class="hobbies">
+                <div class="hobby-item">
+                    <strong>🎮 Gaming</strong>
+                    <p>Exploring immersive worlds</p>
+                </div>
+                <div class="hobby-item">
+                    <strong>🎬 Dramas</strong>
+                    <p>Enjoying great stories</p>
+                </div>
+                <div class="hobby-item">
+                    <strong>👥 Conversations</strong>
+                    <p>Meeting diverse people</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm always interested in discussions about AI, research collaborations, or just having a great conversation.</p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/jiyoon-kim-181547368/" target="_blank" rel="noopener noreferrer" class="contact-link">💼 LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>Copyright &copy; 2026 horokkk</p>
+        <p>&copy; 2026 Jiyoon Kim. All rights reserved.</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Designed with simplicity and artistry in mind.</p>
     </footer>
 </body>
 </html>
